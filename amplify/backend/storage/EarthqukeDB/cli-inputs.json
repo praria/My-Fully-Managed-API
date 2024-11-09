@@ -1,0 +1,10 @@
+{
+  "resourceName": "EarthqukeDB",
+  "tableName": "EarthquakeDataTable",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

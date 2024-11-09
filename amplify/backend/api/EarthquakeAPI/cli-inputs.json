@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/earthquakes": {
+      "name": "/earthquakes",
+      "lambdaFunction": "EarthquakeDataHandler",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

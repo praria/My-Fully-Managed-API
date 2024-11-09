@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-myfullymanagedapi-dev-57b04-authRole",
+      "UnauthRoleArn": "arn:aws:iam::084828562076:role/amplify-myfullymanagedapi-dev-57b04-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::084828562076:role/amplify-myfullymanagedapi-dev-57b04-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-myfullymanagedapi-dev-57b04-deployment",
+      "UnauthRoleName": "amplify-myfullymanagedapi-dev-57b04-unauthRole",
+      "StackName": "amplify-myfullymanagedapi-dev-57b04",
+      "StackId": "arn:aws:cloudformation:us-east-1:084828562076:stack/amplify-myfullymanagedapi-dev-57b04/b4ecbb50-7f96-11ef-869f-0e1173392d2d",
+      "AmplifyAppId": "d1fg8ro9m8fw5f"
+    },
+    "categories": {
+      "function": {
+        "EarthquakeDataHandler": {
+          "deploymentBucketName": "amplify-myfullymanagedapi-dev-57b04-deployment",
+          "s3Key": "amplify-builds/EarthquakeDataHandler-6e533354724d5577734f-build.zip"
+        }
+      },
+      "storage": {
+        "EarthqukeDB": {}
+      },
+      "api": {
+        "EarthquakeAPI": {}
+      },
+      "auth": {
+        "EarthquakeAuth": {}
+      }
+    }
+  }
+}
