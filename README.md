@@ -1,11 +1,10 @@
-# My-Fully-Managed-API
+# My-Fully-Managed-API (Set up the development environment)
 
-# Set up the development environment
-
-# Part I: Get Earthquake Data
+Part I: Get Earthquake Data
 - download or generate data
 
-# Part II: Build the API Using Amplify
+
+Part II: Build the API Using Amplify
 
 1. Initialize Amplify Project
 
