@@ -17,7 +17,7 @@ sudo amplify init
 
 amplify add api 
     - add REST API and configure it to 
-    - create a new Lambda function each CRUD operation (Get, Post, Update, Destroy
+    - create a new Lambda function each CRUD operation (Get, Post, Update, Destroy)
     - set up DynamoDB, define a table schema for storing earthquake data
 amplify push 
 
@@ -37,11 +37,106 @@ amplify push (deploy authentication service)
 
 6. Cognito pool authorizer in API Gateway to handle authentication and authorize request to the API
 
-
-
-Sudo amplify status
-
 REST API endpoint: https://3bhpn23gyj.execute-api.us-east-1.amazonaws.com/dev/earthquakes
+
+
+
+
+TESTING:
+
+1. User Registration
+
+Post request: https://cognito-idp.us-east-1.amazonaws.com/
+
+{
+  "ClientId": "3l6p8cvu74adjuq4i4nqsfa8rl",
+  "Username": "prakash",
+  "Password": "$unny1223",
+  "UserAttributes": [
+    {
+      "Name": "email",
+      "Value": "xyz@gmail.com"
+    }
+  ]
+}
+
+
+2. Confirm UserSignup
+
+Post request: https://cognito-idp.us-east-1.amazonaws.com/
+
+{
+  "ClientId": "3l6p8cvu74adjuq4i4nqsfa8rl", 
+  "Username": "prakash",  
+  "ConfirmationCode": "668660" # code received in email during user registration
+}
+
+
+3. User login
+
+Post request: https://cognito-idp.us-east-1.amazonaws.com/
+
+response: {
+    "AuthenticationResult": {
+        "AccessToken": "",
+        "ExpiresIn": 86400,
+        "IdToken": "",
+        "RefreshToken": "g",
+        "TokenType": "Bearer"
+    },
+    "ChallengeParameters": {}
+}
+
+4. Get All Data
+
+Get request: https://3bhpn23gyj.execute-api.us-east-1.amazonaws.com/dev/earthquakes
+
+Headers: 
+Authorization code
+Content-Type
+
+5. Get Single Data
+
+Get request: https://3bhpn23gyj.execute-api.us-east-1.amazonaws.com/dev/earthquakes/:id 
+
+
+6. Post Data:
+
+Post request: https://3bhpn23gyj.execute-api.us-east-1.amazonaws.com/dev/earthquakes
+
+example: 
+  {
+        "id": "500",
+        "date": "10/23/24 03:10",
+        "latitude": -23.214387,
+        "longitude": -135.410919,
+        "magnitude": 6.0,
+        "depth": 595.5,
+        "region": "Indonesia"
+    }
+
+
+7. Updata Data:
+Put request: https://3bhpn23gyj.execute-api.us-east-1.amazonaws.com/dev/earthquakes
+
+example: 
+  {
+        "id": "500",
+        "date": "11/20/24 03:10",
+        "latitude": -23.214387,
+        "longitude": -135.410919,
+        "magnitude": 6.0,
+        "depth": 595.5,
+        "region": "Indonesia"
+    }
+
+
+8. Delete Signle Data: 
+
+Delete request: https://3bhpn23gyj.execute-api.us-east-1.amazonaws.com/dev/earthquakes/500
+
+
+
 
 
 
